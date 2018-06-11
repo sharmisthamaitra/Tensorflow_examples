@@ -31,11 +31,9 @@ print(d)
 print(e)
 print(f)
 
+
 sess = tf.Session()
 tf.reset_default_graph() 
-
-#print(a.eval(feed_dict={a: random_nbrs}))
-#print(b.eval(feed_dict={a: random_nbrs}))
 
 sess.run(a, feed_dict={a: random_nbrs})
 sess.run(b, feed_dict={a: random_nbrs})
@@ -45,8 +43,8 @@ sess.run(e, feed_dict={a: random_nbrs})
 sess.run(f, feed_dict={a: random_nbrs})
 
 writer = tf.summary.FileWriter('./tf_homework', sess.graph)
-#writer.close()
-#sess.close()
+writer.close()
+
 
 
 
